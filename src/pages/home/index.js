@@ -2,6 +2,7 @@ import { Navbar } from "../../components/Navbar";
 import { SideBar } from "../../components/Sidebar";
 import { NotesCard } from "../../components/NotesCard";
 import { useNotes } from "../../context/notes-context";
+import { Footer } from "../../components/Footer";
 
 export const Home = () => {
   const { title, text, note, noteDispatch } = useNotes();
@@ -23,7 +24,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <main className="flex gap-3">
+      <main className="flex gap-3 h-screen ">
         <SideBar />
         <div className="flex flex-col w-screen mt-7 ">
           <div className=" flex flex-col w-[450px] relative self-center">
@@ -63,6 +64,7 @@ export const Home = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
