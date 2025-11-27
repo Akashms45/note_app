@@ -1,22 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./pages/home";
+import { Pinned } from "./pages/pinned";
+import { Archive } from "./pages/Archive";
+import { Bin } from "./pages/Bin";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 class="text-3xl font-bold">Hello world!</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pinned" element={<Pinned />} />
+        <Route path="/archive" element={<Archive />} />
+        <Route path="/bin" element={<Bin />} />
+      </Routes>
+    </>
   );
 }
 
