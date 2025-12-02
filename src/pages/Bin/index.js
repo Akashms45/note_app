@@ -2,6 +2,7 @@ import { Navbar } from "../../components/Navbar";
 import { SideBar } from "../../components/Sidebar";
 import { NotesCard } from "../../components/NotesCard";
 import { useNotes } from "../../context/notes-context";
+import { Footer } from "../../components/Footer";
 
 export const Bin = () => {
   const { bin } = useNotes();
@@ -9,7 +10,7 @@ export const Bin = () => {
   return (
     <>
       <Navbar />
-      <main className="flex gap-3">
+      <main className="flex gap-3 h-screen">
         <SideBar />
         <div>
           <div className="mt-12 flex flex-wrap gap-4">
@@ -29,6 +30,7 @@ export const Bin = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
