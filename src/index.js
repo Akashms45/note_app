@@ -9,7 +9,7 @@ import { NotesProvider } from "./context/notes-context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/note_app">
       <NotesProvider>
         <App />
       </NotesProvider>

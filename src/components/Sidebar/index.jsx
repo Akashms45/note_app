@@ -2,14 +2,14 @@ import { NavLink } from "react-router-dom";
 
 export const SideBar = () => {
   const getStyles = ({ isActive }) => {
-    const Style = "flex items-center gap-1 px-2 py-1 rounded-r-full";
+    const Style = "flex items-center gap-2 px-1 py-1 w-1 rounded-r-lg";
     return isActive
-      ? `bg-indigo-800 text-slate-50 ${Style}`
-      : `hover:bg-indigo-800 hover:text-slate-50 ${Style}`;
+      ? `bg-indigo-800 px-1 text-slate-800 ${Style}`
+      : `hover:bg-indigo-800 hover:text-slate-800 ${Style}`;
   };
 
   return (
-    <aside className="flex flex-col gap-3 border-r-2 border-gray-200 w-36 h-fi p-3">
+    <aside className="flex flex-col gap-3 border-r-2 border-gray-200 w-36 h-fi px-3 py-1">
       <NavLink className={getStyles} to="/">
         <span className="material-symbols-outlined">home</span>
         <span>Home</span>
